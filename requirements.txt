@@ -16,3 +16,4 @@ notebook_shim==0.2.3
 numpy==1.26.4
 pandas==2.2.0
 playsound==1.2.2
+sklearn
