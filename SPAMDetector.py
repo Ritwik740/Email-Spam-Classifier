@@ -21,7 +21,7 @@ def main():
         if result == 1:
             st.error("This is a spam mail")
             # Load and play the sound file
-            pygame.mixer.music.load("welcome.mp3")
+            pygame.mixer.music.load("https://github.com/Ritwik740/Email-Spam-Classifier/blob/fc1aee4f5474014e7f788db3e8babbe077f40f6d/welcome.mp3")
             pygame.mixer.music.play()
         else:
             st.success("This is a ham mail")
