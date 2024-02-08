@@ -1,11 +1,13 @@
 import pickle
 import streamlit as st
-from gtts import gTTS
 import pygame
 
-
+# Load the model and vectorizer
 model = pickle.load(open("spam.pkl", "rb"))
 cv = pickle.load(open("vectorizer.pkl", "rb"))
+
+# Initialize Pygame's mixer module
+pygame.mixer.init()
 
 def main():
     st.title("Email Spam Classification App")
@@ -18,19 +20,12 @@ def main():
         result = prediction[0]
         if result == 1:
             st.error("This is a spam mail")
-            pygame.mixer.init()  # Initialize Pygame's mixer module
-            pygame.mixer.music.load(welcome.mp3)  # Load the sound file
-            pygame.mixer.music.play()  # Play the sound
-
-            
-            
+            # Load and play the sound file
+            pygame.mixer.music.load("welcome.mp3")
+            pygame.mixer.music.play()
         else:
             st.success("This is a ham mail")
 
 if __name__ == "__main__":
-
-
-   
-
     main()
-    
+
