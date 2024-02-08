@@ -1,7 +1,7 @@
 import pickle
 import streamlit as st
 from playsound import playsound
-import gi
+
 
 model = pickle.load(open("spam.pkl", "rb"))
 cv = pickle.load(open("vectorizer.pkl", "rb"))
