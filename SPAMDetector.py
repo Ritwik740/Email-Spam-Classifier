@@ -3,6 +3,9 @@ import streamlit as st
 from gtts import gTTS
 import pygame
 
+# Set the SDL_AUDIODRIVER environment variable to "dummy" to use the dummy audio driver
+import os
+os.environ['SDL_AUDIODRIVER'] = 'dummy'
 
 model = pickle.load(open("spam.pkl", "rb"))
 cv = pickle.load(open("vectorizer.pkl", "rb"))
@@ -21,16 +24,8 @@ def main():
             pygame.mixer.init()  # Initialize Pygame's mixer module
             pygame.mixer.music.load("welcome.mp3")  # Load the sound file
             pygame.mixer.music.play()  # Play the sound
-
-            
-            
         else:
             st.success("This is a ham mail")
 
 if __name__ == "__main__":
-
-
-   
-
     main()
-    
