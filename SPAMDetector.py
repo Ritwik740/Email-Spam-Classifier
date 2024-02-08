@@ -19,7 +19,7 @@ def main():
         if result == 1:
             st.error("This is a spam mail")
             pygame.mixer.init()  # Initialize Pygame's mixer module
-            pygame.mixer.music.load("welcome.wav")  # Load the sound file
+            pygame.mixer.music.load("welcome.mp3")  # Load the sound file
             pygame.mixer.music.play()  # Play the sound
 
             
