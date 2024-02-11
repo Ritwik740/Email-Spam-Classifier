@@ -41,7 +41,7 @@ def main():
   )
 
   st.write(
-      "Contact: +91 6307463343 | [Linkedin](https://linkedin.com/in/saurabh-mishra-638276278) | [Github](https://github.com/Saurabh6307)"
+      "Contact: ssaurabhishra486@gmail.com | +91 6307463343 | [Linkedin](https://linkedin.com/in/saurabh-mishra-638276278) | [Github](https://github.com/Saurabh6307)"
   )
 
 
